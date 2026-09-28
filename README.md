@@ -62,6 +62,6 @@ questions, and making PRs.
 Small documentation fixes are welcome, such as typos, broken links and
 unclear wording. Open a PR directly.
 
-Report bugs on the [issue tracker](https://github.com/pallets/click/issues/).
+Report bugs on the [issue tracker](https://github.com/pallets/click/issues/), with a minimal example.
 
 [contrib]: https://palletsprojects.com/contributing/
