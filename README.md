@@ -65,5 +65,6 @@ unclear wording. Open a PR directly.
 Report bugs on the [issue tracker](https://github.com/pallets/click/issues/), with a minimal example.
 
 Questions and ideas are welcome in GitHub Discussions.
+Please do not open issues for them.
 
 [contrib]: https://palletsprojects.com/contributing/
