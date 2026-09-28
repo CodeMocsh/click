@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import abc
+import difflib
 import collections.abc as cabc
 import enum
 import os
@@ -14,6 +15,7 @@ from gettext import ngettext
 
 from ._compat import _get_argv_encoding
 from ._compat import open_stream
+from .exceptions import _format_possibilities
 from .exceptions import BadParameter
 from .utils import _LazyFile
 from .utils import _safecall
@@ -480,14 +482,26 @@ class Choice(ParamType[_ValueT_co], t.Generic[_ValueT_co]):
 
         :param value: The invalid value.
 
+        .. versionchanged:: 8.6
+            A "Did you mean" hint is appended when the normalized value is
+            close to one or more of the normalized choices.
+
         .. versionadded:: 8.2
         """
-        choices_str = ", ".join(map(repr, self._normalized_mapping(ctx=ctx).values()))
-        return ngettext(
+        normed_choices = list(self._normalized_mapping(ctx=ctx).values())
+        choices_str = ", ".join(map(repr, normed_choices))
+        message = ngettext(
             "{value!r} is not {choice}.",
             "{value!r} is not one of {choices}.",
             len(self.choices),
         ).format(value=value, choice=choices_str, choices=choices_str)
+        normed_value = self.normalize_choice(value, ctx)
+        possibilities = difflib.get_close_matches(normed_value, normed_choices)
+
+        if possibilities:
+            message = f"{message} {_format_possibilities(possibilities)}"
+
+        return message
 
     def __repr__(self) -> str:
         return _("Choice({choices})").format(choices=list(self.choices))
