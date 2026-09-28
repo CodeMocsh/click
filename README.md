@@ -59,4 +59,6 @@ See our [detailed contributing documentation][contrib] for many ways to
 contribute, including reporting issues, requesting features, asking or answering
 questions, and making PRs.
 
+Report bugs on the [issue tracker](https://github.com/pallets/click/issues/).
+
 [contrib]: https://palletsprojects.com/contributing/
