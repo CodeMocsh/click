@@ -6,6 +6,8 @@ Unreleased
   keyword, is deprecated and raises `TypeError` in Click 9.0. {pr}`3866`
 - An {class}`Option` name written as a Python identifier is deprecated when it
   is not already lower-cased. {pr}`3866`
+- {class}`Choice` appends a "Did you mean" hint to its invalid choice error
+  when the value is close to one or more of the choices.
 
 ## Version 8.5.1
 

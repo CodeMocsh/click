@@ -61,4 +61,12 @@ questions, and making PRs.
 
 Security issues go to the security policy, not the issue tracker.
 
+Small documentation fixes are welcome, such as typos, broken links and
+unclear wording. Open a PR directly.
+
+Report bugs on the [issue tracker](https://github.com/pallets/click/issues/), with a minimal example.
+
+Questions and ideas are welcome in GitHub Discussions.
+Questions belong in GitHub Discussions, not in issues.
+
 [contrib]: https://palletsprojects.com/contributing/
