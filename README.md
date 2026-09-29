@@ -59,4 +59,6 @@ See our [detailed contributing documentation][contrib] for many ways to
 contribute, including reporting issues, requesting features, asking or answering
 questions, and making PRs.
 
+Security issues go to the security policy, not the issue tracker.
+
 [contrib]: https://palletsprojects.com/contributing/
