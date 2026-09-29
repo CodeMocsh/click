@@ -59,6 +59,8 @@ See our [detailed contributing documentation][contrib] for many ways to
 contribute, including reporting issues, requesting features, asking or answering
 questions, and making PRs.
 
+Security issues go to the security policy, not the issue tracker.
+
 Small documentation fixes are welcome, such as typos, broken links and
 unclear wording. Open a PR directly.
 
